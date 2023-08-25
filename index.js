@@ -7,6 +7,9 @@ app.use(
     origin: "*",
   })
 );
+app.use("/get", (req, res) => {
+  return res.status(200).json({ ids: [1369, 1370, 1620, 1612, 1609] });
+});
 app.use("/", async (req, res) => {
   let query = req.query;
   let myurl = new URL("https://muerp.mahindrauniversity.edu.in/markAtt.json");
