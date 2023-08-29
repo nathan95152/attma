@@ -7,8 +7,22 @@ app.use(
     origin: "*",
   })
 );
-app.use("/get", (req, res) => {
+app.get("/get/all", (req, res) => {
+  return res
+    .status(200)
+    .json({ ids: [1370, 1369, 1490, 1426, 1480, 937, 995, 985, 1020, 1082, 1031, 1620, 1612, 1609] });
+});
+app.get("/get/cse", (req, res) => {
+  return res.status(200).json({ ids: [1370, 1369, 1490, 1426, 1480] });
+});
+app.get("/get/ai", (req, res) => {
+  return res.status(200).json({ ids: [937, 995, 985, 1020, 1082, 1031] });
+});
+app.get("/get/ece", (req, res) => {
   return res.status(200).json({ ids: [1369, 1370, 1620, 1612, 1609] });
+});
+app.use("/get", (req, res) => {
+  return res.status(200).json({ ids: [1370, 1369, 1490, 1426, 1480] });
 });
 app.use("/", async (req, res) => {
   let query = req.query;
