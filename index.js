@@ -11,7 +11,7 @@ app.get("/get/all", (req, res) => {
   return res.status(200).json({
     ids: [
       1370, 1369, 1490, 1426, 1480, 1410, 937, 995, 985, 1020, 1082, 1031, 1620, 1612, 1609, 1332, 1305, 1371, 932,
-      1471,
+      1471, 1072,
     ],
   });
 });
@@ -19,7 +19,7 @@ app.get("/get/cse", (req, res) => {
   return res.status(200).json({ ids: [1370, 1369, 1490, 1426, 1480, 1410, 1332, 1305, 1371, 1471] });
 });
 app.get("/get/ai", (req, res) => {
-  return res.status(200).json({ ids: [937, 995, 985, 1020, 1082, 1031, 932] });
+  return res.status(200).json({ ids: [937, 995, 985, 1020, 1082, 1031, 932, 1072] });
 });
 app.get("/get/ece", (req, res) => {
   return res.status(200).json({ ids: [1620, 1612, 1609] });
